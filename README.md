@@ -13,18 +13,19 @@ git clone https://github.com/kvind/mow.git
 
 ### Launch the test
 
+```
 cd mow
 
 mvn clean test
-
+```
 ### Package the application
-
+```
 mvn clean package
-
+```
 ### Run the program with the default test file
-
+```
 java -jar mower_exercise.jar fileToTest.txt
-
+```
 ### Log files for more details
 
 You can open mowerLog.log to see more details about each move of the mowers.
