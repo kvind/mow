@@ -24,7 +24,7 @@ mvn clean package
 ```
 ### Run the program with the default test file
 ```
-java -jar mower_exercise.jar fileToTest.txt
+java -jar target/mower_exercise.jar fileToTest.txt
 ```
 ### Log files for more details
 
