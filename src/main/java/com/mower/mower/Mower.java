@@ -96,7 +96,12 @@ public class Mower {
 
 		return this.position;
 	}
-
+	
+	/**
+	 * Set the new position for the mower if all the condition with the current surface are ok.
+	 * @param newCalculatedPosition
+	 * @param currentSurface
+	 */
 	private void setNewCalculatedPosition(final Position newCalculatedPosition, final Surface currentSurface) {
 		if (!currentSurface.isOutOfBound(newCalculatedPosition)) {
 			if (currentSurface.isAuthorizedPosition(newCalculatedPosition)) {

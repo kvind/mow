@@ -72,20 +72,32 @@ public enum CardinalDirection implements Direction {
 			return EAST;
 		}
 	};
-
+	
+	/**
+	 * The direction symbol.
+	 */
 	private final String direction;
-
+	
 	private CardinalDirection(String cardinalDirection) {
 		this.direction = cardinalDirection;
 	}
 
 	private static final Map<String, CardinalDirection> stringToEnum = Stream.of(values())
 			.collect(Collectors.toMap(CardinalDirection::getDirection, e -> e));
-
+	
+	/**
+	 * Get the direction according to which symbol is given
+	 * @param symbol
+	 * @return a Cardinal Direction
+	 */
 	public static CardinalDirection getDirectionFromString(String symbol) {
 		return stringToEnum.get(symbol);
 	}
-
+	
+	/**
+	 * 
+	 * @return the direction symbol
+	 */
 	public String getDirection() {
 		return this.direction;
 	}

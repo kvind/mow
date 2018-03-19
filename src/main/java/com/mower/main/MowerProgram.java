@@ -1,9 +1,6 @@
 package com.mower.main;
-import java.net.URISyntaxException;
-
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.apache.log4j.chainsaw.Main;
 
 import com.mower.controller.MowerController;
 import com.mower.parser.FileParser;
@@ -11,9 +8,9 @@ import com.mower.parser.Parser;
 
 public class MowerProgram {
 
-	static Logger logger = LogManager.getLogger(Main.class);
+	static Logger logger = LogManager.getLogger(MowerProgram.class);
 
-	public static void main(String[] args) throws URISyntaxException {
+	public static void main(String[] args) {
 
 		logger.info("----- WELCOME IN THE MOWER PROGRAM -----");
 		

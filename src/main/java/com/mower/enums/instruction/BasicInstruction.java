@@ -37,18 +37,33 @@ public enum BasicInstruction {
 	private BasicInstruction(final String instruction) {
 		this.instruction = instruction;
 	}
-
+	
+	/**
+	 * 
+	 * @return the symbol representing the instruction.
+	 */
 	public String getInstruction() {
 		return this.instruction;
 	}
 
 	private static final Map<String, BasicInstruction> stringToEnum = Stream.of(values())
 			.collect(Collectors.toMap(BasicInstruction::getInstruction, e -> e));
-
+	
+	/**
+	 * 
+	 * @param symbol
+	 * @return an Optional with the instruction or empty.
+	 */
 	public static Optional<BasicInstruction> getInstructionFromString(String symbol) {
 		return Optional.ofNullable(stringToEnum.get(symbol));
 	}
-
+	
+	/**
+	 * Apply an instruction to modify direction or position given.
+	 * @param direction
+	 * @param position
+	 * @return The new calculated instruction after applying the instruction.
+	 */
 	public abstract Entry<Direction, Position> applyInstruction(Direction direction, Position position);
 
 }
